@@ -2,6 +2,7 @@
 
 var csv : TextAsset; 
 var cube : GameObject;
+var cube_red :GameObject;
 function Start ()
 {
 	var map=CSVReader.SplitCsvGrid(csv.text);
@@ -9,6 +10,7 @@ function Start ()
 	var tamY =CSVReader.getHeight(csv.text);
 	var xPosition=0;
 	var yPosition=0;
+	
 	for(var row  in map){
 		for(var position in row){
 			/*Debug.Log("Posicion x:"+xPosition+"posicion y:"+yPosition+"es un :"+position);*/
@@ -16,7 +18,7 @@ function Start ()
 			
 				case "1":
 				Debug.Log("pongo un"+position+"en x:"+xPosition+" y:"+yPosition);	
-					Instantiate(cube as GameObject,  Vector3(xPosition*2,(yPosition*2)-8,0), Quaternion.identity);
+					Instantiate(cube_red as GameObject,  Vector3(xPosition*2,(yPosition*2)-8,0), Quaternion.identity);
 					break;
 				case "2":
 					Debug.Log("pongo un"+position+"en x:"+xPosition+" y:"+yPosition);	

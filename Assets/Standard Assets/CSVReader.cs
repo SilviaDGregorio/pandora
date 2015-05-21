@@ -26,8 +26,6 @@ public class CSVReader : MonoBehaviour {
 			}
 			textOutput += "\n"; 
 		}
-		Debug.Log (textOutput);
-
 
 	}
 	static public int getWidth(string csvText){
