@@ -5,6 +5,7 @@ private var max : boolean;
 var Vert : boolean;
 var maxAmount : int;
 var step : float;
+var direction:int;
 function Start () {
 	Xpos = transform.position.x;
 	Ypos = transform.position.y;
@@ -34,10 +35,8 @@ function FixedUpdate () {
 			transform.position.y -= step;
 		}
 	} else { //Horizontal movement
-		if(!max){
-			transform.position.x += step;
-		} else {
-			transform.position.x -= step;
-		}
+		
+			transform.position.x += step*direction;
+		
 	}
 }
