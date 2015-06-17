@@ -9,8 +9,7 @@ public class CSVReader : MonoBehaviour {
 	public void Start()
 	{
 		string[,] grid = SplitCsvGrid(csvFile.text);
-		Debug.Log("size = " + (1+ grid.GetUpperBound(0)) + "," + (1 + grid.GetUpperBound(1))); 
-		
+				
 		DebugOutputGrid(grid); 
 	}
 	
@@ -30,12 +29,10 @@ public class CSVReader : MonoBehaviour {
 	}
 	static public int getWidth(string csvText){
 		string[,] grid = SplitCsvGrid(csvText);
-		Debug.Log ("size:" + (1 + grid.GetUpperBound (1)));
 		return 1 + grid.GetUpperBound (1);
 	}
 	static public int getHeight(string csvText){
 		string[,] grid = SplitCsvGrid(csvText);
-		Debug.Log ("size:" + (1 + grid.GetUpperBound (0)));
 		return 1 + grid.GetUpperBound (0);
 	}
 	// splits a CSV file into a 2D string array
