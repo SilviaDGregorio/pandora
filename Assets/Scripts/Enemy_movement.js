@@ -30,9 +30,11 @@ function FixedUpdate () {
 	//MOVING THE PLATFORM
 	if(Vert){ // Vertical movement
 		if(!max){
-			transform.position.y += step;
+			transform.position.y += 1;
+			transform.position.x+=1;
 		} else {
-			transform.position.y -= step;
+			transform.position.y -= 1;
+			transform.position.x-=1;
 		}
 	} else { //Horizontal movement
 		
