@@ -3,7 +3,7 @@ var Player : GameObject;
 var spawnPoint : Transform;
 function OnTriggerEnter(other : Collider){
 var cube = this.gameObject;
-	if( other.tag == "Enemy" ){
+	if( other.tag == "Enemy" || other.tag =="Enemy_red"){
 	var enemy_move=other.GetComponent(Enemy_movement);
 		enemy_move.direction=enemy_move.direction*-1;
 	}

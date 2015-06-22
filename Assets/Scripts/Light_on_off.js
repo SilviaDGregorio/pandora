@@ -12,16 +12,26 @@ var light_on_off =GameObject.Find("Point light");
 			light_on_off.light.intensity =0;
 			size_box_collider(0);
 			hide_box(true,1);
+			hide_show_red_enemy(true);
 		}
 		else{
 			light_on_off.light.intensity =4;
 			size_box_collider(1);
 			hide_box(false,0);
+			hide_show_red_enemy(false);
 		}
 
 		
 
 	}
+}
+function hide_show_red_enemy(hide_or_not:boolean){
+	var enemy_red_array = GameObject.FindGameObjectsWithTag("Enemy_red");
+
+	for(var enemy : GameObject in enemy_red_array){
+		enemy.renderer.enabled=hide_or_not;
+	}
+
 }
 function size_box_collider(size_box:int){
 	var cube_when_light_off_array = GameObject.FindGameObjectsWithTag("Cube_hide_when_light_off");

@@ -17,9 +17,7 @@ function FixedUpdate () {
 
 
   timeSinceLastCall += Time.deltaTime*10;
- Debug.Log("time.delta" +Time.deltaTime*10);
- Debug.Log(timeSinceLastCall);
-     
+    
 	//SET THE MAX
 	if(Vert){ //Vertical
 		if (timeSinceLastCall >= 8){
