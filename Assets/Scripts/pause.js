@@ -17,13 +17,13 @@ function Update(){
 	if(paused){
 		if(Time.timeScale >0){
 			Time.timeScale  =0;
-			audio.Pause();
+			GetComponent.<AudioSource>().Pause();
 		}
 	}
 	else{
 		if(Time.timeScale < TS){
 			Time.timeScale  =TS;
-			audio.Play();
+			GetComponent.<AudioSource>().Play();
 		}
 	}
 }

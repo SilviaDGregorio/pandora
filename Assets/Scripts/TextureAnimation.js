@@ -31,6 +31,6 @@ function SetSpriteAnimation(colCount : int,rowCount : int,rowNumber : int,colNum
 	// v coordinate is the bottom of the image in opengl so we need to invert.
 	offset = Vector2 ((uIndex+colNumber) * size.x, (1.0 - size.y) - (vIndex+rowNumber) * size.y);
  
-	renderer.material.SetTextureOffset ("_MainTex", offset);
-	renderer.material.SetTextureScale  ("_MainTex", size);
+	GetComponent.<Renderer>().material.SetTextureOffset ("_MainTex", offset);
+	GetComponent.<Renderer>().material.SetTextureScale  ("_MainTex", size);
 }

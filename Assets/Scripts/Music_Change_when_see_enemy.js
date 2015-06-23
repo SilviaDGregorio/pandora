@@ -12,18 +12,18 @@ enemy = GameObject.FindWithTag("Enemy");
 player = GameObject.FindWithTag("Player");
 
 	if(enemy.transform.position.x < player.transform.position.x +10 && enemy.transform.position.x > player.transform.position.x - 10){
-		if(!audio.isPlaying || close_to_enemy==false){
-			audio.clip=enemy_song;
-			audio.Play();
+		if(!GetComponent.<AudioSource>().isPlaying || close_to_enemy==false){
+			GetComponent.<AudioSource>().clip=enemy_song;
+			GetComponent.<AudioSource>().Play();
 			close_to_enemy=true;		
 		}
 		
 	}
 	else{
 		
-		if(!audio.isPlaying || close_to_enemy==true){
-			audio.clip=normal_song;
-			audio.Play();
+		if(!GetComponent.<AudioSource>().isPlaying || close_to_enemy==true){
+			GetComponent.<AudioSource>().clip=normal_song;
+			GetComponent.<AudioSource>().Play();
 			close_to_enemy=false;		
 		}		
 		

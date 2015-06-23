@@ -20,7 +20,7 @@ function Update () {
 }
 function OnTriggerEnter(other : Collider){
 	if(!stomp){
-		if(other.tag == "Player" && this.renderer.enabled==true){
+		if(other.tag == "Player" && this.GetComponent.<Renderer>().enabled==true){
 			Destroy(other.gameObject);
 			var P : GameObject = Instantiate(Player, spawnPoint.position, Quaternion.identity);
 			var sf = Camera.main.GetComponent(move_camera_with_player);
