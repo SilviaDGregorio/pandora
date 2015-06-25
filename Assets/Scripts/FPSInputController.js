@@ -8,6 +8,7 @@ function Awake () {
 // Update is called once per frame
 function Update () {
 	// Get the input vector from keyboard or analog stick
+	print(Input.GetAxis("Horizontal"));
 var directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
 	
 	if (directionVector != Vector3.zero) {

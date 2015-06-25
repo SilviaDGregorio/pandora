@@ -20,21 +20,7 @@ Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\
 Loading C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.051 seconds
+- Completed reload, in  0.060 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-<RI> Initialized touch support.
-Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\System.dll (this message is harmless)
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 18b4 -> priority: 1 
-  Thread -> id: 1118 -> priority: 1 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.421221 ms
-
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 383.
-Total: 0.370774 ms (FindLiveObjects: 0.030790 ms CreateObjectMapping: 0.015823 ms MarkObjects: 0.158231 ms  DeleteObjects: 0.164646 ms)
-
-Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\Boo.Lang.dll (this message is harmless)
-Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityScript.Lang.dll (this message is harmless)
