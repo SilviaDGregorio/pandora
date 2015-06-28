@@ -20,7 +20,28 @@ Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\
 Loading C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.060 seconds
+- Completed reload, in  0.075 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 13f8 -> priority: 1 
+  Thread -> id: 1388 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.761910 ms
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 262.
+Total: 0.468707 ms (FindLiveObjects: 0.021810 ms CreateObjectMapping: 0.038061 ms MarkObjects: 0.251032 ms  DeleteObjects: 0.156948 ms)
+
+The file could not be read:
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Could not find a part of the path "C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Assets\Settings\Settings.txt".
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\Boo.Lang.dll (this message is harmless)
