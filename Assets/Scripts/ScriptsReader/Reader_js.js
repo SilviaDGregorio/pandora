@@ -15,10 +15,11 @@ function Start ()
 	
 	var xPosition=0;
 	var yPosition=0;
-	
-	for(var row  in map){
-		for(var position in row){
-			/*Debug.Log("Posicion x:"+xPosition+"posicion y:"+yPosition+"es un :"+position);*/
+	Debug.Log(tamX);
+
+		for(var position in map){
+			
+			Debug.Log("Posicion x:"+xPosition+"posicion y:"+yPosition+"es un :"+position);
 			switch(position){		
 			
 				case "1":
@@ -30,7 +31,7 @@ function Start ()
 					Instantiate(cube as GameObject,  Vector3(xPosition*2,(yPosition*2)-8,0), Quaternion.identity);
 					break;
 				case "3":
-					//Debug.Log("pongo un"+position+"en x:"+xPosition+" y:"+yPosition);		
+				//	Debug.Log("pongo un"+position+"en x:"+xPosition+" y:"+yPosition);		
 					Instantiate(cube as GameObject,  Vector3(xPosition*2,(yPosition*2)-8,0), Quaternion.identity);
 					break;
 				case "4":
@@ -51,9 +52,9 @@ function Start ()
 					break;
 			}
 			
-		}
 		yPosition++;
-		if(yPosition==13){
+		//Debug.Log("Posicion x despues:"+xPosition+"posicion y:"+yPosition+"es un :");
+		if(yPosition==tamX){
 			xPosition++;
 			yPosition=0;
 		}

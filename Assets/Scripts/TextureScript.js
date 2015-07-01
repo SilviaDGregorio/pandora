@@ -1,10 +1,17 @@
 ﻿#pragma strict
 var X : float;
+var material_player : Material;
+var material_player_top : Material;
+var gravity_player : boolean;
 private var keys = new String[4]; //front, back,space ,power
 private var move_back="a";
 private var move_front="d";
-
+private	var normal_rownumber=1;
+private	var stop_rownumber=0;
+private var direction : float;
 function Start () {//Gathering normal object scale x 
+	direction=X;
+	gravity_player=false;
 	X = transform.localScale.x;
 	Read ();
 	if(keys[0]=="1"){
@@ -43,20 +50,46 @@ function Read () {
 }
 function Update () {
 	var AT = gameObject.GetComponent(TextureAnimation);
+    var graphics = this.gameObject as GameObject;
+    var mesh=graphics.GetComponent.<Renderer>();
+    if(Input.GetKeyDown("r")){
+    	if(gravity_player){
+    		gravity_player=false;
+    	}
+    	else{
+    		gravity_player=true;
+    	}
+    	if(gravity_player){
+    		mesh.material=material_player_top;
+    		direction=-X;
+    		stop_rownumber=1;
+    		normal_rownumber=0;
 
+    	}
+    	else{
+    		mesh.material=material_player;
+    		direction=X;
+    		stop_rownumber=0;
+    		normal_rownumber=1;
+    	
+    	}
+ 
+    }
 	if(Input.GetKey(move_back)){
 		//Gamer pushes a key
 		//Set texture to normal
-		transform.localScale.x = X;
-		AT.rowNumber = 1;
+		transform.localScale.x = direction;
+		AT.rowNumber = normal_rownumber;
+	
 	}else if(Input.GetKey(move_front)){
 		//Push d
 		//Flip the texture
-		transform.localScale.x = -X;
-		AT.rowNumber = 1;
+		transform.localScale.x = -direction;
+		AT.rowNumber = normal_rownumber;
+	
 	}
 	else{
-		AT.rowNumber = 0;
+		AT.rowNumber = stop_rownumber;
 	}
-
+	
 }

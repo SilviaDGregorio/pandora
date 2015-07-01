@@ -9,8 +9,12 @@ var totalCells	: int =  4;
 var fps		: int = 10;
 var offset	: Vector2;  //Maybe this should be a private var
  
+function Start(){
+	SetSpriteAnimation(colCount,rowCount,rowNumber,colNumber,totalCells,fps);  
+}
 //Update
-function Update () { SetSpriteAnimation(colCount,rowCount,rowNumber,colNumber,totalCells,fps);  }
+function Update () { SetSpriteAnimation(colCount,rowCount,rowNumber,colNumber,totalCells,fps);  
+}
  
 //SetSpriteAnimation
 function SetSpriteAnimation(colCount : int,rowCount : int,rowNumber : int,colNumber : int,totalCells : int,fps : int){
