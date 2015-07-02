@@ -19,7 +19,7 @@ function Start ()
 
 		for(var position in map){
 			
-			Debug.Log("Posicion x:"+xPosition+"posicion y:"+yPosition+"es un :"+position);
+			//Debug.Log("Posicion x:"+xPosition+"posicion y:"+yPosition+"es un :"+position);
 			switch(position){		
 			
 				case "1":

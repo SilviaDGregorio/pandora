@@ -3,6 +3,7 @@ var X : float;
 var material_player : Material;
 var material_player_top : Material;
 var gravity_player : boolean;
+var player : GameObject;
 private var keys = new String[4]; //front, back,space ,power
 private var move_back="a";
 private var move_front="d";
@@ -50,6 +51,7 @@ function Read () {
 }
 function Update () {
 	var AT = gameObject.GetComponent(TextureAnimation);
+	var motor = player.GetComponent(CharacterMotor);
     var graphics = this.gameObject as GameObject;
     var mesh=graphics.GetComponent.<Renderer>();
     if(Input.GetKeyDown("r")){
@@ -60,6 +62,7 @@ function Update () {
     		gravity_player=true;
     	}
     	if(gravity_player){
+    		motor.gravity=-50;
     		mesh.material=material_player_top;
     		direction=-X;
     		stop_rownumber=1;
@@ -67,6 +70,7 @@ function Update () {
 
     	}
     	else{
+    		motor.gravity=50;
     		mesh.material=material_player;
     		direction=X;
     		stop_rownumber=0;

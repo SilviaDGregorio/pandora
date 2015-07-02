@@ -4,7 +4,7 @@
 
 // Does this script currently respond to input?
 var canControl : boolean = true;
-
+var gravity : float;
 var useFixedUpdate : boolean = true;
 
 // For the next variables, @System.NonSerialized tells Unity to not serialize the variable or show it in the inspector view.
@@ -299,6 +299,7 @@ private function UpdateFunction () {
 	if (MoveWithPlatform()) {
 		// Use the center of the lower half sphere of the capsule as reference point.
 		// This works best when the character is standing on moving tilting platforms. 
+		
 		movingPlatform.activeGlobalPoint = tr.position + Vector3.up * (controller.center.y - controller.height*0.5 + controller.radius);
 		movingPlatform.activeLocalPoint = movingPlatform.activePlatform.InverseTransformPoint(movingPlatform.activeGlobalPoint);
 		
@@ -332,6 +333,7 @@ function FixedUpdate () {
 }
 
 function Update () {
+	movement.gravity=gravity;
 	if (!useFixedUpdate)
 		UpdateFunction();
 }
@@ -423,7 +425,7 @@ private function ApplyGravityAndJumping (velocity : Vector3) {
 		// and if they hit the button a fraction of a second too soon and no new jump happens as a consequence,
 		// it's confusing and it feels like the game is buggy.
 		if (jumping.enabled && canControl && (Time.time - jumping.lastButtonDownTime < 0.2)) {
-			grounded = false;
+ 			grounded = false;
 			jumping.jumping = true;
 			jumping.lastStartTime = Time.time;
 			jumping.lastButtonDownTime = -100;
@@ -459,7 +461,7 @@ private function ApplyGravityAndJumping (velocity : Vector3) {
 }
 
 function OnControllerColliderHit (hit : ControllerColliderHit) {
-	if (hit.normal.y > 0 && hit.normal.y > groundNormal.y && hit.moveDirection.y < 0) {
+	if (hit.normal.y > 0 && hit.normal.y > groundNormal.y && hit.moveDirection.y < 0 && gravity==50) {
 		if ((hit.point - movement.lastHitPoint).sqrMagnitude > 0.001 || lastGroundNormal == Vector3.zero)
 			groundNormal = hit.normal;
 		else
@@ -469,6 +471,16 @@ function OnControllerColliderHit (hit : ControllerColliderHit) {
 		movement.hitPoint = hit.point;
 		movement.frameVelocity = Vector3.zero;
 	}
+/*	else if (hit.normal.y < 0 && hit.normal.y < groundNormal.y && hit.moveDirection.y > 0 && gravity==-50) {
+		if ((hit.point - movement.lastHitPoint).sqrMagnitude > 0.001)
+			groundNormal = Vector3(0.0,1.0,0.0);
+		else
+			groundNormal = lastGroundNormal;
+		
+		movingPlatform.hitPlatform = hit.collider.transform;
+		movement.hitPoint = hit.point;
+		movement.frameVelocity = Vector3.zero;
+	}*/
 }
 
 private function SubtractNewPlatformVelocity () {
@@ -517,7 +529,10 @@ private function AdjustGroundVelocityToNormal (hVelocity : Vector3, groundNormal
 }
 
 private function IsGroundedTest () {
-	return (groundNormal.y > 0.01);
+
+	return (groundNormal.y>0.01);
+
+		
 }
 
 function GetMaxAcceleration (grounded : boolean) : float {
@@ -531,7 +546,7 @@ function GetMaxAcceleration (grounded : boolean) : float {
 function CalculateJumpVerticalSpeed (targetJumpHeight : float) {
 	// From the jump height and gravity we deduce the upwards speed 
 	// for the character to reach at the apex.
-	return Mathf.Sqrt (2 * targetJumpHeight * movement.gravity);
+	return Mathf.Sqrt (2 * targetJumpHeight * Mathf.Abs(movement.gravity));
 }
 
 function IsJumping () {
