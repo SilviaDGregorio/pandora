@@ -4,6 +4,7 @@ var material_player : Material;
 var material_player_top : Material;
 var gravity_player : boolean;
 var player : GameObject;
+var gravity_active : boolean;
 private var keys = new String[4]; //front, back,space ,power
 private var move_back="a";
 private var move_front="d";
@@ -54,7 +55,7 @@ function Update () {
 	var motor = player.GetComponent(CharacterMotor);
     var graphics = this.gameObject as GameObject;
     var mesh=graphics.GetComponent.<Renderer>();
-    if(Input.GetKeyDown("r")){
+    if(Input.GetKeyDown("r") && gravity_active){
     	if(gravity_player){
     		gravity_player=false;
     	}

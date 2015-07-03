@@ -15,7 +15,7 @@ function Start ()
 	
 	var xPosition=0;
 	var yPosition=0;
-	Debug.Log(tamX);
+	
 
 		for(var position in map){
 			
