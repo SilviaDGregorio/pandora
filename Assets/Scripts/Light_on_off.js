@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 function Start () {
-
+	hide_box(false,0);
 }
 
 function Update () {
