@@ -20,7 +20,7 @@ Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\
 Loading C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora1_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora1_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.047 seconds
+- Completed reload, in  0.046 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -28,98 +28,53 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora1_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 18f0 -> priority: 1 
-  Thread -> id: 5bc -> priority: 1 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.715877 ms
-
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 291.
-Total: 0.413968 ms (FindLiveObjects: 0.021810 ms CreateObjectMapping: 0.028225 ms MarkObjects: 0.204845 ms  DeleteObjects: 0.158231 ms)
-
+  Thread -> id: 194c -> priority: 1 
+  Thread -> id: 1948 -> priority: 1 
+Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora1_Data\Managed\UnityScript.Lang.dll (this message is harmless)
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora1_Data\Managed\Boo.Lang.dll (this message is harmless)
-The file could not be read:
+The referenced script on this Behaviour is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 1715)
 
-Could not find a part of the path "C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Assets\Settings\Settings.txt".
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.698760 ms
 
-NullReferenceException: Object reference not set to an instance of an object
-  at ChangeKeySettings.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Detected key code: E
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Detected key code: 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-IsolatedStorageException: Could not find a part of the path "C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Assets\Settings\Settings.txt".
-  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
-  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
-  at System.IO.StreamWriter..ctor (System.String path, Boolean append, System.Text.Encoding encoding, Int32 bufferSize) [0x00000] in <filename unknown>:0 
-  at System.IO.StreamWriter..ctor (System.String path) [0x00000] in <filename unknown>:0 
-  at ChangeKeySettings.Write () [0x00000] in <filename unknown>:0 
-  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <filename unknown>:0 
-  at UnityEngine.UI.Button.Press () [0x00000] in <filename unknown>:0 
-  at UnityEngine.UI.Button.OnPointerClick (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
-  at UnityEngine.EventSystems.ExecuteEvents.Execute (IPointerClickHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
-  at UnityEngine.EventSystems.ExecuteEvents.Execute[IPointerClickHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
-UnityEngine.Debug:Internal_LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception)
-UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
-UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
-UnityEngine.EventSystems.StandaloneInputModule:Process()
-UnityEngine.EventSystems.EventSystem:Update()
- 
-(Filename:  Line: -1)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.581608 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 263.
-Total: 0.325871 ms (FindLiveObjects: 0.026514 ms CreateObjectMapping: 0.008553 ms MarkObjects: 0.279685 ms  DeleteObjects: 0.010263 ms)
+Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 354.
+Total: 0.397288 ms (FindLiveObjects: 0.031218 ms CreateObjectMapping: 0.027797 ms MarkObjects: 0.170633 ms  DeleteObjects: 0.166784 ms)
 
 The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1715)
 
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.486669 ms
-The file could not be read:
+The referenced script on this Behaviour is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 1715)
 
-Could not find a part of the path "C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Assets\Settings\Settings.txt".
+The referenced script on this Behaviour is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 1715)
 
-
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 426.
-Total: 0.446042 ms (FindLiveObjects: 0.038061 ms CreateObjectMapping: 0.025231 ms MarkObjects: 0.215109 ms  DeleteObjects: 0.166357 ms)
-
-The file could not be read:
+The referenced script on this Behaviour is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 1715)
 
-Could not find a part of the path "C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Assets\Settings\Settings.txt".
+The referenced script on this Behaviour is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 1715)
 
-Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora1_Data\Managed\UnityScript.Lang.dll (this message is harmless)
-The file could not be read:
+The referenced script on this Behaviour is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 1715)
 
-Could not find a part of the path "C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Assets\Settings\Lvl.txt".
+The referenced script on this Behaviour is missing!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+(Filename:  Line: 1715)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1715)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1715)
 
