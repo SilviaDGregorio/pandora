@@ -1,7 +1,9 @@
 ﻿#pragma strict
 
 function Start () {
+	size_box_collider(1);
 	hide_box(false,0);
+	hide_show_red_enemy(false);
 }
 
 function Update () {
