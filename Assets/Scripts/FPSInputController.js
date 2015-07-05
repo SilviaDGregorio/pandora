@@ -1,34 +1,14 @@
 private var motor : CharacterMotor;
-private var keys = new String[4]; //front, back,space ,power
+private var keys = new String[5]; //front, back,space ,power
 // Use this for initialization
 function Awake () {
 	motor = GetComponent(CharacterMotor);
-	Read();
+	var controller = GameObject.Find("Controller");
+	controller_r_w= controller.GetComponent("Reader_writer_settings")  as Reader_writer_settings;
+	controller_r_w.ReadSettings();
+	keys=controller_r_w.keys;
 }
-function Read () {
-    try {
-        // Create an instance of StreamReader to read from a file.
-       var sr = new StreamReader("Assets/Settings/Settings.txt");
-        // Read and display lines from the file until the end of the file is reached.
-       var line = sr.ReadLine();
-       var i =0;
-        while (line != null && i<4) {
-       
-            keys[i]=line;
-          
-            line = sr.ReadLine();
 
-            i++;
-            
-        }
-        sr.Close();
-    }
-    catch (e) {
-        // Let the user know what went wrong.
-        print("The file could not be read:");
-        print(e.Message);
-    }
-}
 // Update is called once per frame
 function Update () {
 	// Get the input vector from keyboard or analog stick

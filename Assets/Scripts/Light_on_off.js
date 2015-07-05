@@ -1,15 +1,20 @@
 ﻿#pragma strict
-
+private var controller_r_w:Reader_writer_settings;
+private var keys = new String[5]; //front, back,space ,power
 function Start () {
 	size_box_collider(1);
 	hide_box(false,0);
 	hide_show_red_enemy(false);
+	var controller = GameObject.Find("Controller");
+	controller_r_w= controller.GetComponent("Reader_writer_settings")  as Reader_writer_settings;
+	controller_r_w.ReadSettings();
+	keys=controller_r_w.keys;
 }
 
 function Update () {
 var light_on_off =GameObject.Find("Point light");
 
-	if(Input.GetKeyUp("e")){
+	if(Input.GetKeyUp(keys[2].ToLower())){
 		if(light_on_off.GetComponent.<Light>().intensity!=0){
 			light_on_off.GetComponent.<Light>().intensity =0;
 			size_box_collider(0);

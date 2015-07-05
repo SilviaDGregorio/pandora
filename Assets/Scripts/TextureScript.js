@@ -5,17 +5,21 @@ var material_player_top : Material;
 var gravity_player : boolean;
 var player : GameObject;
 var gravity_active : boolean;
-private var keys = new String[4]; //front, back,space ,power
+private var keys = new String[5]; //front, back,space ,power
 private var move_back="a";
 private var move_front="d";
 private	var normal_rownumber=1;
 private	var stop_rownumber=0;
 private var direction : float;
+private var controller_r_w:Reader_writer_settings;
 function Start () {//Gathering normal object scale x 
 	direction=X;
 	gravity_player=false;
 	X = transform.localScale.x;
-	Read ();
+	var controller = GameObject.Find("Controller");
+	controller_r_w= controller.GetComponent("Reader_writer_settings")  as Reader_writer_settings;
+	controller_r_w.ReadSettings();
+	keys=controller_r_w.keys;
 	if(keys[0]=="1"){
 	 	move_back="a";
 	 	move_front="d";
@@ -26,36 +30,13 @@ function Start () {//Gathering normal object scale x
 	}
 }
 
-function Read () {
-    try {
-        // Create an instance of StreamReader to read from a file.
-       var sr = new StreamReader("Assets/Settings/Settings.txt");
-        // Read and display lines from the file until the end of the file is reached.
-       var line = sr.ReadLine();
-       var i =0;
-        while (line != null && i<4) {
-       
-            keys[i]=line;
-          
-            line = sr.ReadLine();
 
-            i++;
-            
-        }
-        sr.Close();
-    }
-    catch (e) {
-        // Let the user know what went wrong.
-        print("The file could not be read:");
-        print(e.Message);
-    }
-}
 function Update () {
 	var AT = gameObject.GetComponent(TextureAnimation);
 	var motor = player.GetComponent(CharacterMotor);
     var graphics = this.gameObject as GameObject;
     var mesh=graphics.GetComponent.<Renderer>();
-    if(Input.GetKeyDown("r") && gravity_active){
+    if(Input.GetKeyDown(keys[4].ToLower()) && gravity_active){
     	if(gravity_player){
     		gravity_player=false;
     	}

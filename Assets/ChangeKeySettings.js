@@ -1,13 +1,13 @@
 ﻿#pragma strict 
 import System;  // Used for getting the date
 import System.IO;
-private var keys = new String[4]; //front, back,space ,power
+private var keys = new String[5]; //front, back,space ,power
 private var changekey:int;
 private var changekeybool:boolean;
 public var buttonpower:UI.Button;
+public var buttongravity:UI.Button;
 function Start () {
 	Read ();
-
 	var button = GameObject.Find("Button_front_"+keys[1]);
 	changeColor(button.GetComponent.<UI.Button>());
 	button = GameObject.Find("Button_back_"+keys[0]);
@@ -15,7 +15,7 @@ function Start () {
 	button = GameObject.Find("Button_jump_"+keys[3]);
 	changeColor(button.GetComponent.<UI.Button>());
 	buttonpower.GetComponentInChildren(UI.Text).text = keys[2];
-
+	buttongravity.GetComponentInChildren(UI.Text).text = keys[4];
   
 }
 
@@ -74,8 +74,12 @@ function changePreferences( button:UI.Button){
 
 function changePower(){
 	changekeybool=true;
+	changekey=2;
 }
- 
+function changeGravity(){
+	changekeybool=true;
+	changekey=4;
+} 
 function Read () {
     try {
         // Create an instance of StreamReader to read from a file.
@@ -83,7 +87,7 @@ function Read () {
         // Read and display lines from the file until the end of the file is reached.
        var line = sr.ReadLine();
        var i =0;
-        while (line != null && i<4) {
+        while (line != null && i<5) {
        
             keys[i]=line;
           
@@ -117,8 +121,14 @@ function OnGUI() {
 	var e : Event = Event.current;
 	if (e.isKey && changekeybool) {
 		Debug.Log("Detected key code: " + e.keyCode);
-		keys[2]=""+e.keyCode;
-		buttonpower.GetComponentInChildren(UI.Text).text = keys[2];
+		if(changekey==2){
+			keys[2]=""+e.keyCode;
+			buttonpower.GetComponentInChildren(UI.Text).text = keys[2];
+		}
+		else if(changekey==4){
+			keys[4]=""+e.keyCode;
+			buttongravity.GetComponentInChildren(UI.Text).text = keys[4];
+		}
 		Debug.Log("Detected key code: " + keys[changekey]);
 		changekeybool=false;
 	}

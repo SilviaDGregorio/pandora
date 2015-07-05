@@ -1,7 +1,7 @@
 ﻿#pragma strict
 var lvl_file : TextAsset; 
 var settings_file : TextAsset; 
-private var keys = new String[4]; //front, back,space ,power
+private var keys = new String[5]; //front, back,space ,power
 private var lvl:int;
 private var max_lvl:int;
 function Start () {
