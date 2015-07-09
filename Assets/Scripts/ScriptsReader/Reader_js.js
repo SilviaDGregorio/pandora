@@ -7,15 +7,35 @@ var normal_enemy :GameObject;
 var vertical_enemy:GameObject;
 var red_enemy:GameObject;
 var cube_hide_light_on :GameObject;
+var wood_material:Material;
+var wood_material_light_on:Material;
+var wood_material_light_off:Material;
+var rock_material:Material;
+var rock_material_light_on:Material;
+var rock_material_light_off:Material;
 function Start ()
 {
 	var map=CSVReader.SplitCsvGrid(csv.text);
 	var tamX=CSVReader.getWidth(csv.text);
 	var tamY =CSVReader.getHeight(csv.text);
-	
+	var controller = GameObject.Find("Controller");
+	var controller_r_w= controller.GetComponent("Reader_writer_settings")  as Reader_writer_settings;
+	controller_r_w.ReadLvl();
+	var lvl=controller_r_w.lvl;
 	var xPosition=0;
 	var yPosition=0;
-	
+	 var mesh=cube.GetComponent.<Renderer>();
+	if (lvl==1){
+	   
+		mesh.material=wood_material;
+		cube_red.GetComponent.<Renderer>().material=wood_material_light_on;
+		cube_hide_light_on.GetComponent.<Renderer>().material=wood_material_light_off;
+	}
+	else if (lvl==2){
+		mesh.material=rock_material;
+		cube_red.GetComponent.<Renderer>().material=rock_material_light_on;
+		cube_hide_light_on.GetComponent.<Renderer>().material=rock_material_light_off;
+	}
 
 		for(var position in map){
 			
