@@ -21,7 +21,7 @@ function OnTriggerEnter(other : Collider){
 			lvl=1;
 			controller_r_w.lvl=lvl;
 			controller_r_w.WriteLvl();
-			Application.LoadLevel("menu");
+			Application.LoadLevel("about");
 	
 		}
 		else{
