@@ -9,8 +9,8 @@ function Start () {
 	isCreatedLvlFile();
 }
 
-function Update () {
-
+function About () {
+	Application.LoadLevel("about");
 }
 function Menu(){
 	Application.LoadLevel("menu");
