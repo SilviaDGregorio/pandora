@@ -1,3 +1,4 @@
+public var booleanJump:boolean;
 private var motor : CharacterMotor;
 private var keys = new String[5]; //front, back,space ,power
 // Use this for initialization
@@ -40,16 +41,17 @@ function Update () {
 	
 	// Apply the direction to the CharacterMotor
 	motor.inputMoveDirection = transform.rotation * directionVector;
-	if(keys[3]=="1"){
-		motor.inputJump = Input.GetButton("Jump");
+	if(booleanJump){
+		if(keys[3]=="1"){
+			motor.inputJump = Input.GetButton("Jump");
+		}
+		else if(keys[3]=="2"){
+			motor.inputJump = Input.GetButton("Jump_w");
+		}
+		else if(keys[3]=="3"){
+			motor.inputJump = Input.GetButton("Jump_up");
+		}
 	}
-	else if(keys[3]=="2"){
-		motor.inputJump = Input.GetButton("Jump_w");
-	}
-	else if(keys[3]=="3"){
-		motor.inputJump = Input.GetButton("Jump_up");
-	}
-	
 }
 
 // Require a character controller to be attached to the same game object

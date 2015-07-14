@@ -10,10 +10,8 @@ private var move_back="a";
 private var move_front="d";
 private	var normal_rownumber=1;
 private	var stop_rownumber=0;
-private var direction : float;
 private var controller_r_w:Reader_writer_settings;
 function Start () {//Gathering normal object scale x 
-	direction=X;
 	gravity_player=false;
 	X = transform.localScale.x;
 	var controller = GameObject.Find("Controller");
@@ -46,7 +44,6 @@ function Update () {
     	if(gravity_player){
     		motor.gravity=-50;
     		mesh.material=material_player_top;
-    		direction=-X;
     		stop_rownumber=1;
     		normal_rownumber=0;
 
@@ -54,7 +51,6 @@ function Update () {
     	else{
     		motor.gravity=50;
     		mesh.material=material_player;
-    		direction=X;
     		stop_rownumber=0;
     		normal_rownumber=1;
     	
@@ -64,13 +60,13 @@ function Update () {
 	if(Input.GetKey(move_back)){
 		//Gamer pushes a key
 		//Set texture to normal
-		transform.localScale.x = direction;
+		transform.localScale.x = X;
 		AT.rowNumber = normal_rownumber;
 	
 	}else if(Input.GetKey(move_front)){
 		//Push d
 		//Flip the texture
-		transform.localScale.x = -direction;
+		transform.localScale.x = -X;
 		AT.rowNumber = normal_rownumber;
 	
 	}
