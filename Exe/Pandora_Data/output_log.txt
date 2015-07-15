@@ -20,7 +20,7 @@ Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\
 Loading C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.043 seconds
+- Completed reload, in  0.050 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -29,40 +29,12 @@ Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\UnityScript.Lang.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 19b4 -> priority: 1 
-  Thread -> id: cd4 -> priority: 1 
+  Thread -> id: 9f8 -> priority: 1 
+  Thread -> id: 9b8 -> priority: 1 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.693631 ms
+UnloadTime: 3.626068 ms
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 209.
-Total: 0.421237 ms (FindLiveObjects: 0.014112 ms CreateObjectMapping: 0.035495 ms MarkObjects: 0.212543 ms  DeleteObjects: 0.158231 ms)
-
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.585455 ms
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 240.
-Total: 0.292514 ms (FindLiveObjects: 0.025659 ms CreateObjectMapping: 0.008980 ms MarkObjects: 0.250604 ms  DeleteObjects: 0.006414 ms)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.713751 ms
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 308.
-Total: 0.440054 ms (FindLiveObjects: 0.018389 ms CreateObjectMapping: 0.011974 ms MarkObjects: 0.252314 ms  DeleteObjects: 0.157375 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 308.
+Total: 0.427225 ms (FindLiveObjects: 0.017533 ms CreateObjectMapping: 0.014112 ms MarkObjects: 0.241196 ms  DeleteObjects: 0.153955 ms)
 
 Platform assembly: C:\Users\SilviaD\Documents\New Unity Project 1\game develop1\Exe\Pandora_Data\Managed\Boo.Lang.dll (this message is harmless)
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.480681 ms
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 267.
-Total: 0.296362 ms (FindLiveObjects: 0.030363 ms CreateObjectMapping: 0.008553 ms MarkObjects: 0.248465 ms  DeleteObjects: 0.008553 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1715)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.463574 ms
-
-Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 464.
-Total: 0.448179 ms (FindLiveObjects: 0.016678 ms CreateObjectMapping: 0.014967 ms MarkObjects: 0.250176 ms  DeleteObjects: 0.166356 ms)
-
